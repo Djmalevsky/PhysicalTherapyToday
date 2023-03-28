@@ -1,3 +1,17 @@
+<?php
+// Start session
+session_start();
+
+// Check if "Acute Care" checkbox was checked
+if (isset($_POST['acute_care']) && $_POST['acute_care'] == 'on') {
+    $_SESSION['acute_care_checked'] = true;
+} else {
+    $_SESSION['acute_care_checked'] = false;
+}
+
+// Set checkbox value based on session variable
+$acute_care_checked = isset($_SESSION['acute_care_checked']) && $_SESSION['acute_care_checked'];
+?>
 <!DOCTYPE html> 
 <html class="avada-html-layout-wide avada-html-header-position-top" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
    <head>
@@ -31,7 +45,7 @@
       <meta property="og:site_name" content="DoctorSEO"/>
       <meta property="og:description" content="Number: 304-323-3322     Email: Kevinrodger@gmail.com   Thank you for taking a look at my profile in your search for a therapist. I value my relationship with clients highly. I pay careful attention to their internal struggles and relational needs, while also tapping into their resilience and sources of hope for lasting change and"/>
       <meta property="og:image" content="./images/medical_logo_1x_light-1.png"/>
-      <link rel='stylesheet' id='fusion-dynamic-css-css' href='./css/fusion-styles-28d2f75ddf017df4bafda5d25a8c69ee.min.css' type='text/css' media='all' />
+      <link rel='stylesheet' id='fusion-dynamic-css-css' href='./css/fusion-styles-f981d20cf38fae8b22241d9c860ce0b3.min.css' type='text/css' media='all' />
       <script>
          /* <![CDATA[ */
          var rcewpp = {
@@ -58,7 +72,6 @@
       </script> 
    </head>
    <body class="page-template-default page page-id-1141 fusion-image-hovers fusion-pagination-sizing fusion-button_type-flat fusion-button_span-yes fusion-button_gradient-linear avada-image-rollover-circle-yes avada-image-rollover-yes avada-image-rollover-direction-center_vertical fusion-body ltr fusion-sticky-header no-tablet-sticky-header no-mobile-sticky-header fusion-disable-outline fusion-sub-menu-fade mobile-logo-pos-left layout-wide-mode avada-has-boxed-modal-shadow-none layout-scroll-offset-full avada-has-zero-margin-offset-top fusion-top-header menu-text-align-center mobile-menu-design-modern fusion-show-pagination-text fusion-header-layout-v1 avada-responsive avada-footer-fx-none avada-menu-highlight-style-bar fusion-search-form-classic fusion-main-menu-search-dropdown fusion-avatar-square avada-dropdown-styles avada-blog-layout-grid avada-blog-archive-layout-grid avada-header-shadow-no avada-menu-icon-position-left avada-has-megamenu-shadow avada-has-mainmenu-dropdown-divider avada-has-header-100-width avada-has-pagetitle-bg-full avada-has-100-footer avada-has-breadcrumb-mobile-hidden avada-has-titlebar-hide avada-has-pagination-padding avada-flyout-menu-direction-fade avada-ec-views-v1" data-awb-post-id="1141">
-
       <a class="skip-link screen-reader-text" href="#content">Skip to content</a>   
       <div id="boxed-wrapper">
          <div id="wrapper" class="fusion-wrapper">
@@ -92,6 +105,276 @@
                      </div>
                   </div>
                </div>
+                              <div class="fusion-fullwidth fullwidth-box fusion-builder-row-2 fusion-flex-container has-pattern-background has-mask-background nonhundred-percent-fullwidth non-hundred-percent-height-scrolling" style="--awb-border-radius-top-left:0px;--awb-border-radius-top-right:0px;--awb-border-radius-bottom-right:0px;--awb-border-radius-bottom-left:0px;" >
+                  <div class="fusion-builder-row fusion-row fusion-flex-align-items-flex-start" style="max-width:1216.8px;margin-left: calc(-4% / 2 );margin-right: calc(-4% / 2 );">
+                     <div class="fusion-layout-column fusion_builder_column fusion-builder-column-3 fusion_builder_column_1_1 1_1 fusion-flex-column" style="--awb-z-index:100000000000;--awb-z-index-hover:100000000000;--awb-overflow:visible;--awb-bg-color:#ffffff;--awb-bg-size:cover;--awb-width-large:100%;--awb-margin-top-large:0px;--awb-spacing-right-large:1.92%;--awb-margin-bottom-large:30px;--awb-spacing-left-large:1.92%;--awb-width-medium:100%;--awb-order-medium:0;--awb-spacing-right-medium:1.92%;--awb-spacing-left-medium:1.92%;--awb-width-small:100%;--awb-order-small:0;--awb-spacing-right-small:1.92%;--awb-spacing-left-small:1.92%;">
+                        <div class="fusion-column-wrapper fusion-column-has-shadow fusion-flex-justify-content-flex-start fusion-content-layout-column">
+                           <nav class="awb-menu awb-menu_row awb-menu_em-hover mobile-mode-always-expanded awb-menu_icons-left awb-menu_dc-yes mobile-trigger-fullwidth-off awb-menu_mobile-toggle loading mega-menu-loading awb-menu_desktop awb-menu_arrows-main awb-menu_dropdown awb-menu_expand-right awb-menu_transition-fade" style="--awb-font-size:11px;--awb-line-height:24px;--awb-margin-top:12px;--awb-margin-bottom:12px;--awb-text-transform:var(--awb-typography3-text-transform);--awb-border-radius-top-left:10px;--awb-border-radius-top-right:10px;--awb-border-radius-bottom-right:10px;--awb-border-radius-bottom-left:10px;--awb-gap:1px;--awb-align-items:center;--awb-justify-content:center;--awb-items-padding-top:12px;--awb-items-padding-right:12px;--awb-items-padding-bottom:12px;--awb-items-padding-left:12px;--awb-color:#344260;--awb-letter-spacing:0.2px;--awb-active-color:#344260;--awb-active-bg:#edf6fc;--awb-active-border-color:#344260;--awb-submenu-color:#344260;--awb-submenu-bg:#ffffff;--awb-submenu-sep-color:rgba(240,240,240,0);--awb-submenu-border-radius-top-left:10px;--awb-submenu-border-radius-top-right:10px;--awb-submenu-border-radius-bottom-right:10px;--awb-submenu-border-radius-bottom-left:10px;--awb-submenu-active-bg:#efefef;--awb-submenu-active-color:#344260;--awb-submenu-space:3px;--awb-submenu-font-size:13px;--awb-submenu-text-transform:var(--awb-typography3-text-transform);--awb-submenu-line-height:0px;--awb-submenu-letter-spacing:0px;--awb-icons-size:10;--awb-icons-color:#344260;--awb-icons-hover-color:#344260;--awb-main-justify-content:flex-start;--awb-mobile-nav-button-align-hor:center;--awb-mobile-color:#344260;--awb-mobile-nav-items-height:64;--awb-mobile-active-bg:#edf6fc;--awb-mobile-active-color:#344260;--awb-mobile-trigger-font-size:20px;--awb-trigger-padding-right:16px;--awb-trigger-padding-left:16px;--awb-mobile-trigger-color:#344260;--awb-mobile-nav-trigger-bottom-margin:12px;--awb-mobile-font-size:19px;--awb-mobile-text-transform:var(--awb-typography3-text-transform);--awb-mobile-line-height:24px;--awb-mobile-letter-spacing:0px;--awb-mobile-justify:center;--awb-mobile-caret-left:auto;--awb-mobile-caret-right:0;--awb-box-shadow:2px 10px 20px -6px #edf6fc;;--awb-fusion-font-family-typography:&quot;Inter&quot;;--awb-fusion-font-style-typography:normal;--awb-fusion-font-weight-typography:400;--awb-fusion-font-family-submenu-typography:&quot;Inter&quot;;--awb-fusion-font-style-submenu-typography:normal;--awb-fusion-font-weight-submenu-typography:400;--awb-fusion-font-family-mobile-typography:&quot;Inter&quot;;--awb-fusion-font-style-mobile-typography:normal;--awb-fusion-font-weight-mobile-typography:400;" aria-label="Menu" data-breakpoint="640" data-count="0" data-transition-type="fade" data-transition-time="300">
+                              <button type="button" class="awb-menu__m-toggle awb-menu__m-toggle_no-text" aria-expanded="false" aria-controls="menu-header-blocks-ecommerce"><span class="awb-menu__m-toggle-inner"><span class="collapsed-nav-text"><span class="screen-reader-text">Toggle Navigation</span></span><span class="awb-menu__m-collapse-icon awb-menu__m-collapse-icon_no-text"><span class="awb-menu__m-collapse-icon-open awb-menu__m-collapse-icon-open_no-text fa-bars fas"></span><span class="awb-menu__m-collapse-icon-close awb-menu__m-collapse-icon-close_no-text fa-times fas"></span></span></span></button>
+                              <ul id="menu-header-blocks-ecommerce" class="fusion-menu awb-menu__main-ul awb-menu__main-ul_row">
+                                 <li  id="menu-item-1099"  class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-1099 awb-menu__li awb-menu__main-li awb-menu__main-li_regular awb-menu__main-li_with-main-arrow awb-menu__main-li_with-arrow"  data-item-id="1099">
+                                    <span class="awb-menu__main-background-default awb-menu__main-background-default_fade"></span><span class="awb-menu__main-background-active awb-menu__main-background-active_fade"></span><a  href="http://localhost/physicaltherapytoday/wordpress/category/uncategorized/" class="awb-menu__main-a awb-menu__main-a_regular"><span class="menu-text">Type of Physical Therapy</span><span class="awb-menu__open-nav-submenu-hover"></span></a><button type="button" aria-label="Open submenu of Type of Physical Therapy" aria-expanded="false" class="awb-menu__open-nav-submenu_mobile awb-menu__open-nav-submenu_main"></button>
+                                    <ul class="awb-menu__sub-ul awb-menu__sub-ul_main">
+                                    <form id="filter-form" method="GET" action="search-results-page.php">
+                                    <input type="hidden" name="zipcode" value="<?php echo htmlspecialchars($zipcode); ?>" />
+                                       <li  id="menu-item-1104"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1104 awb-menu__li awb-menu__sub-li" >
+                                              <label class="awb-menu__sub-a">
+                                                <span>Acute Care</span>
+                                                <input type="checkbox" id="acute_care" name="spec[]" <?php echo $acute_care_checked ? 'checked' : ''; ?> />
+                                              </label></li>
+                                       <li  id="menu-item-1105"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1105 awb-menu__li awb-menu__sub-li" >
+                                              <label class="awb-menu__sub-a"><span>Aquatic</span>
+                                              <input type="checkbox" id="aquatic" name="spec[]" />
+                                              </label></li>
+                                       <li  id="menu-item-1106"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1106 awb-menu__li awb-menu__sub-li" >
+                                              <label class="awb-menu__sub-a"><span>Cardiovascular &#038; Pulmonary</span>
+                                              <input type="checkbox" id="cardiovascular_pulmonary" name="cardiovascular_pulmonary" />
+                                              </li>
+                                       <li  id="menu-item-1107"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1107 awb-menu__li awb-menu__sub-li" >
+                                              <label class="awb-menu__sub-a"><span>Concussion Rehab</span>
+                                              <input type="checkbox" id="concussion_rehab" name="spec[]" />
+                                              </li>
+                                        <li id="menu-item-1108" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1108 awb-menu__li awb-menu__sub-li">
+                                          <label class="awb-menu__sub-a"><span>Critical Care</span>
+                                            <input type="checkbox" id="critical_care" name="spec[]" />
+                                            </li>
+                                        <li id="menu-item-1109" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1109 awb-menu__li awb-menu__sub-li">
+                                          <label class="awb-menu__sub-a">
+                                            <span>Diagnostic Ultrasound</span>
+                                            <input type="checkbox" id="diagnostic_ultrasound" name="spec[]" />
+                                          </label>
+                                        </li>
+                                        <li id="menu-item-1110" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1110 awb-menu__li awb-menu__sub-li">
+                                          <label class="awb-menu__sub-a">
+                                            <span>Dry Needling</span>
+                                            <input type="checkbox" id="dry_needling" name="spec[]" />
+                                          </label>
+                                        </li>
+                                        <li id="menu-item-1110" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1110 awb-menu__li awb-menu__sub-li">
+                                          <label class="awb-menu__sub-a">
+                                            <span>Home Care</span>
+                                            <input type="checkbox" id="home_care" name="spec[]" />
+                                          </label>
+                                        </li>                                       
+                                        <li id="menu-item-1110" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1110 awb-menu__li awb-menu__sub-li">
+                                          <label class="awb-menu__sub-a">
+                                            <span>Lymphedema</span>
+                                            <input type="checkbox" id="Lymphedema" name="spec[]" />
+                                          </label>
+                                        </li>                                       
+                                        <li id="menu-item-1110" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1110 awb-menu__li awb-menu__sub-li">
+                                          <label class="awb-menu__sub-a">
+                                            <span>Manipulation</span>
+                                            <input type="checkbox" id="Manipulation" name="spec[]" />
+                                          </label>
+                                        </li>                                          
+                                        <li id="menu-item-1110" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1110 awb-menu__li awb-menu__sub-li">
+                                          <label class="awb-menu__sub-a">
+                                            <span>Mobility / Flexibility</span>
+                                            <input type="checkbox" id="Mobility_Flexibility" name="spec[]" />
+                                          </label>
+                                        </li>
+                                        <li id="menu-item-1110" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1110 awb-menu__li awb-menu__sub-li">
+                                          <label class="awb-menu__sub-a">
+                                            <span>Neurological</span>
+                                            <input type="checkbox" id="Neurological" name="spec[]" />
+                                          </label>
+                                        </li>
+                                       <li id="menu-item-1110" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1110 awb-menu__li awb-menu__sub-li">
+                                          <label class="awb-menu__sub-a">
+                                            <span>Oncology</span>
+                                            <input type="checkbox" id="Oncology" name="spec[]" />
+                                          </label>
+                                        </li>
+                                        <li id="menu-item-1110" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1110 awb-menu__li awb-menu__sub-li">
+                                          <label class="awb-menu__sub-a">
+                                            <span>Orthopedic</span>
+                                            <input type="checkbox" id="Orthopedic" name="spec[]" />
+                                          </label>
+                                        </li>
+                                        <li id="menu-item-1110" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1110 awb-menu__li awb-menu__sub-li">
+                                          <label class="awb-menu__sub-a">
+                                            <span>Pediatric</span>
+                                            <input type="checkbox" id="Pediatric" name="spec[]" />
+                                          </label>
+                                        </li>
+                                        <li id="menu-item-1110" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1110 awb-menu__li awb-menu__sub-li">
+                                          <label class="awb-menu__sub-a">
+                                            <span>Skilled Nursing Facility</span>
+                                            <input type="checkbox" id="skilled_nursing_facility" name="spec[]" />
+                                          </label>
+                                        </li>
+                                        <li id="menu-item-1110" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1110 awb-menu__li awb-menu__sub-li">
+                                          <label class="awb-menu__sub-a">
+                                            <span>Splinting / Casting</span>
+                                            <input type="checkbox" id="splinting_casting" name="spec[]" />
+                                          </label>
+                                        </li>
+                                        <li id="menu-item-1110" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1110 awb-menu__li awb-menu__sub-li">
+                                          <label class="awb-menu__sub-a">
+                                            <span>Sub-Acute Care</span>
+                                            <input type="checkbox" id="sub_acute_care" name="spec[]" />
+                                          </label>
+                                        </li>
+                                        <li id="menu-item-1110" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1110 awb-menu__li awb-menu__sub-li">
+                                          <label class="awb-menu__sub-a">
+                                            <span>Strength and Conditioning</span>
+                                            <input type="checkbox" id="strength_and_conditioning" name="spec[]" />
+                                          </label>
+                                        </li>
+                                        <li id="menu-item-1110" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1110 awb-menu__li awb-menu__sub-li">
+                                          <label class="awb-menu__sub-a">
+                                            <span>Pelvic Floor</span>
+                                            <input type="checkbox" id="pelvic_floor" name="spec[]" />
+                                          </label>
+                                        </li>
+                                        <li id="menu-item-1110" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1110 awb-menu__li awb-menu__sub-li">
+                                          <label class="awb-menu__sub-a">
+                                            <span>Vestibular Rehab</span>
+                                            <input type="checkbox" id="vestibular_rehab" name="spec[]" />
+                                          </label>
+                                        </li>
+                                        <li id="menu-item-1110" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1110 awb-menu__li awb-menu__sub-li">
+                                          <label class="awb-menu__sub-a">
+                                            <span>Virtual Physical Therapy</span>
+                                            <input type="checkbox" id="virtual_physical_therapy" name="spec[]" />
+                                          </label>
+                                        </li>
+                                        <li id="menu-item-1110" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1110 awb-menu__li awb-menu__sub-li">
+                                          <label class="awb-menu__sub-a">
+                                            <span>Women’s Health</span>
+                                            <input type="checkbox" id="virtual_physical_therapy" name="spec[]" />
+                                          </label>
+                                        </li>
+                                        <li id="menu-item-1110" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1110 awb-menu__li awb-menu__sub-li">
+                                          <label class="awb-menu__sub-a">
+                                            <span>Wound Care</span>
+                                            <input type="checkbox" id="virtual_physical_therapy" name="spec[]" />
+                                          </label>
+                                        </li>
+                                        </form>
+                                    </ul>
+                                 </li>
+                                 <li  id="menu-item-1100"  class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-1100 awb-menu__li awb-menu__main-li awb-menu__main-li_regular awb-menu__main-li_with-main-arrow awb-menu__main-li_with-arrow"  data-item-id="1100">
+                                    <span class="awb-menu__main-background-default awb-menu__main-background-default_fade"></span><span class="awb-menu__main-background-active awb-menu__main-background-active_fade"></span><a  href="http://localhost/physicaltherapytoday/wordpress/category/uncategorized/" class="awb-menu__main-a awb-menu__main-a_regular"><span class="menu-text">Board Certified Specialist</span><span class="awb-menu__open-nav-submenu-hover"></span></a><button type="button" aria-label="Open submenu of Board Certified Specialist" aria-expanded="false" class="awb-menu__open-nav-submenu_mobile awb-menu__open-nav-submenu_main"></button>
+                                    <ul class="awb-menu__sub-ul awb-menu__sub-ul_main">
+                                       <li  id="menu-item-1128"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1128 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Cardiovascular &#038; Pulmonary (CCS)</span></a></li>
+                                       <li  id="menu-item-1129"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1129 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Clinical Electrophysiologist (ECS)</span></a></li>
+                                       <li  id="menu-item-1130"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1130 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Geriatrics (GCS)</span></a></li>
+                                       <li  id="menu-item-1131"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1131 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Certified Hand Therapist (CHT)</span></a></li>
+                                       <li  id="menu-item-1132"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1132 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Health and Wellness Coach (NBC-HWC)</span></a></li>
+                                       <li  id="menu-item-1133"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1133 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Neurology (NCS)</span></a></li>
+                                       <li  id="menu-item-1134"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1134 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Oncology</span></a></li>
+                                       <li  id="menu-item-1135"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1135 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Orthopedics (OCS)</span></a></li>
+                                       <li  id="menu-item-1136"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1136 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Pediatrics (PCS)</span></a></li>
+                                       <li  id="menu-item-1137"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1137 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Sports (SCS)</span></a></li>
+                                       <li  id="menu-item-1138"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1138 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Women’s Health (WCS)</span></a></li>
+                                       <li  id="menu-item-1139"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1139 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Wound Management (CWS)</span></a></li>
+                                    </ul>
+                                 </li>
+                                 <li  id="menu-item-1101"  class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-1101 awb-menu__li awb-menu__main-li awb-menu__main-li_regular awb-menu__main-li_with-main-arrow awb-menu__main-li_with-arrow"  data-item-id="1101">
+                                    <span class="awb-menu__main-background-default awb-menu__main-background-default_fade"></span><span class="awb-menu__main-background-active awb-menu__main-background-active_fade"></span><a  href="http://localhost/physicaltherapytoday/wordpress/category/uncategorized/" class="awb-menu__main-a awb-menu__main-a_regular"><span class="menu-text">Supplementary Certifications / Licenses</span><span class="awb-menu__open-nav-submenu-hover"></span></a><button type="button" aria-label="Open submenu of Supplementary Certifications / Licenses" aria-expanded="false" class="awb-menu__open-nav-submenu_mobile awb-menu__open-nav-submenu_main"></button>
+                                    <ul class="awb-menu__sub-ul awb-menu__sub-ul_main">
+                                       <li  id="menu-item-1140"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1140 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Certified Athletic Trainer (ATC)</span></a></li>
+                                       <li  id="menu-item-1141"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1141 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Blood Flow Restriction Training (BFRT)</span></a></li>
+                                       <li  id="menu-item-1142"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1142 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Concussion Rehab Certification</span></a></li>
+                                       <li  id="menu-item-1143"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1143 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Certified in Dry Needling (CIDN)</span></a></li>
+                                       <li  id="menu-item-1144"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1144 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Certified Exercise Physiologist (CEP)</span></a></li>
+                                       <li  id="menu-item-1145"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1145 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Functional Movement Screen (FMS)</span></a></li>
+                                       <li  id="menu-item-1146"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1146 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Functional Range Conditioning Certification (FRC)</span></a></li>
+                                       <li  id="menu-item-1147"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1147 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Instrument Assisted Soft Tissue Massage Certification</span></a></li>
+                                       <li  id="menu-item-1148"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1148 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Certified Kettlebell Instructor</span></a></li>
+                                       <li  id="menu-item-1149"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1149 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Certified Kinesio Taping Practitioner (CKTP)</span></a></li>
+                                       <li  id="menu-item-1150"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1150 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Certified Personal Trainer  (CPT)</span></a></li>
+                                       <li  id="menu-item-1151"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1151 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Pelvic Rehabilitation Practitioner Certification (PRPC)</span></a></li>
+                                       <li  id="menu-item-1152"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1152 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Pilates Instructor</span></a></li>
+                                       <li  id="menu-item-1153"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1153 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Postural Restoration Certified (PRC)</span></a></li>
+                                       <li  id="menu-item-1154"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1154 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>LSVT-Big Certified</span></a></li>
+                                       <li  id="menu-item-1155"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1155 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>McKenzie Method of Mechanical Diagnosis (MDT)</span></a></li>
+                                       <li  id="menu-item-1156"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1156 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Nutritionist</span></a></li>
+                                       <li  id="menu-item-1157"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1157 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Certified Orthopedic Manual Therapist (COMT)</span></a></li>
+                                       <li  id="menu-item-1158"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1158 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Certified Performance and Sports Scientist (CPSS)</span></a></li>
+                                       <li  id="menu-item-1159"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1159 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Selective Functional Movement Assessment (SFMA)</span></a></li>
+                                       <li  id="menu-item-1160"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1160 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Spinal manipulation therapy (Cert. SMT)</span></a></li>
+                                       <li  id="menu-item-1161"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1161 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Certified Special Population Specialist (CSPS)</span></a></li>
+                                       <li  id="menu-item-1162"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1162 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Certified Strength and Conditioning Specialist (CSCS)</span></a></li>
+                                       <li  id="menu-item-1163"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1163 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Tactical Strength and Conditioning Facilitator (TSAC-F)</span></a></li>
+                                       <li  id="menu-item-1164"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1164 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Titleist Performance Institute Certified</span></a></li>
+                                       <li  id="menu-item-1165"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1165 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Vestibular Rehab Certified</span></a></li>
+                                       <li  id="menu-item-1166"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1166 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Wound Care Certified (WCC)</span></a></li>
+                                       <li  id="menu-item-1167"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1167 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Yoga Instructor</span></a></li>
+                                    </ul>
+                                 </li>
+                                 <li  id="menu-item-1102"  class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-1102 awb-menu__li awb-menu__main-li awb-menu__main-li_regular awb-menu__main-li_with-main-arrow awb-menu__main-li_with-arrow"  data-item-id="1102">
+                                    <span class="awb-menu__main-background-default awb-menu__main-background-default_fade"></span><span class="awb-menu__main-background-active awb-menu__main-background-active_fade"></span><a  href="http://localhost/physicaltherapytoday/wordpress/category/uncategorized/" class="awb-menu__main-a awb-menu__main-a_regular"><span class="menu-text">Insurance and Payment</span><span class="awb-menu__open-nav-submenu-hover"></span></a><button type="button" aria-label="Open submenu of Insurance and Payment" aria-expanded="false" class="awb-menu__open-nav-submenu_mobile awb-menu__open-nav-submenu_main"></button>
+                                    <ul class="awb-menu__sub-ul awb-menu__sub-ul_main">
+                                       <li  id="menu-item-1168"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1168 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Aetna</span></a></li>
+                                       <li  id="menu-item-1169"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1169 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Amerigroup</span></a></li>
+                                       <li  id="menu-item-1170"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1170 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Amerihealth</span></a></li>
+                                       <li  id="menu-item-1171"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1171 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Anthem</span></a></li>
+                                       <li  id="menu-item-1172"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1172 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Blue Cross</span></a></li>
+                                       <li  id="menu-item-1173"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1173 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Blue Shield</span></a></li>
+                                       <li  id="menu-item-1174"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1174 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Cash</span></a></li>
+                                       <li  id="menu-item-1175"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1175 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Cigna</span></a></li>
+                                       <li  id="menu-item-1176"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1176 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Emblem Health</span></a></li>
+                                       <li  id="menu-item-1177"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1177 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Empire Blue Cross Blue Shield</span></a></li>
+                                       <li  id="menu-item-1178"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1178 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Horizon Blue Cross Blue Shield</span></a></li>
+                                       <li  id="menu-item-1179"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1179 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Humana</span></a></li>
+                                       <li  id="menu-item-1180"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1180 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Magellan</span></a></li>
+                                       <li  id="menu-item-1181"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1181 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Magnacare</span></a></li>
+                                       <li  id="menu-item-1182"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1182 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Medicaid</span></a></li>
+                                       <li  id="menu-item-1183"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1183 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Medicare</span></a></li>
+                                       <li  id="menu-item-1184"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1184 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Motor Vehicle</span></a></li>
+                                       <li  id="menu-item-1185"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1185 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Oxford</span></a></li>
+                                       <li  id="menu-item-1186"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1186 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Qualcare</span></a></li>
+                                       <li  id="menu-item-1187"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1187 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Tricare</span></a></li>
+                                       <li  id="menu-item-1188"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1188 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>United Health Care</span></a></li>
+                                       <li  id="menu-item-1189"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1189 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Worker’s Compensation</span></a></li>
+                                    </ul>
+                                 </li>
+                                 <li  id="menu-item-1103"  class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-1103 awb-menu__li awb-menu__main-li awb-menu__main-li_regular awb-menu__main-li_with-main-arrow awb-menu__main-li_with-arrow"  data-item-id="1103">
+                                    <span class="awb-menu__main-background-default awb-menu__main-background-default_fade"></span><span class="awb-menu__main-background-active awb-menu__main-background-active_fade"></span><a  href="http://localhost/physicaltherapytoday/wordpress/category/uncategorized/" class="awb-menu__main-a awb-menu__main-a_regular"><span class="menu-text">Language</span><span class="awb-menu__open-nav-submenu-hover"></span></a><button type="button" aria-label="Open submenu of Language" aria-expanded="false" class="awb-menu__open-nav-submenu_mobile awb-menu__open-nav-submenu_main"></button>
+                                    <ul class="awb-menu__sub-ul awb-menu__sub-ul_main">
+                                       <li  id="menu-item-1200"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1200 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>American Sign Language (ASL)</span></a></li>
+                                       <li  id="menu-item-1202"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Armenian</span></a></li>
+                                       <li  id="menu-item-1201"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1201 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Arabic</span></a></li>
+                                       <li  id="menu-item-1203"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1203 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Bosnian</span></a></li>
+                                       <li  id="menu-item-1204"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1204 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Cantonese</span></a></li>
+                                       <li  id="menu-item-1205"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1205 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Creole</span></a></li>
+                                       <li  id="menu-item-1206"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1206 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Croatian</span></a></li>
+                                       <li  id="menu-item-1207"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1207 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Farsi</span></a></li>
+                                       <li  id="menu-item-1208"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1208 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Filipino</span></a></li>
+                                       <li  id="menu-item-1209"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1209 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>French</span></a></li>
+                                       <li  id="menu-item-1210"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1210 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>German</span></a></li>
+                                       <li  id="menu-item-1211"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1211 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Greek</span></a></li>
+                                       <li  id="menu-item-1212"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1212 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Gujarati</span></a></li>
+                                       <li  id="menu-item-1213"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1213 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Hebrew</span></a></li>
+                                       <li  id="menu-item-1214"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1214 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Hindi</span></a></li>
+                                       <li  id="menu-item-1215"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1215 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Hungarian</span></a></li>
+                                       <li  id="menu-item-1216"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1216 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Italian</span></a></li>
+                                       <li  id="menu-item-1217"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1217 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Japanese</span></a></li>
+                                       <li  id="menu-item-1218"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1218 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Korean</span></a></li>
+                                       <li  id="menu-item-1219"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1219 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Mandarin</span></a></li>
+                                       <li  id="menu-item-1220"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1220 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Polish</span></a></li>
+                                       <li  id="menu-item-1221"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1221 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Portuguese</span></a></li>
+                                       <li  id="menu-item-1222"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1222 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Punjabi</span></a></li>
+                                       <li  id="menu-item-1223"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1223 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Romanian</span></a></li>
+                                       <li  id="menu-item-1224"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1224 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Russian</span></a></li>
+                                       <li  id="menu-item-1225"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1225 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Serbian</span></a></li>
+                                       <li  id="menu-item-1226"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1226 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Sinhalese</span></a></li>
+                                       <li  id="menu-item-1227"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1227 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Spanish</span></a></li>
+                                       <li  id="menu-item-1228"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1228 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Turkish</span></a></li>
+                                       <li  id="menu-item-1229"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1229 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Ukrainian</span></a></li>
+                                       <li  id="menu-item-1230"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1230 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Urdu</span></a></li>
+                                       <li  id="menu-item-1231"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1231 awb-menu__li awb-menu__sub-li" ><a  href="#" class="awb-menu__sub-a"><span>Vietnamese</span></a></li>
+                                    </ul>
+                                 </li>
+                              </ul>
+                           </nav>
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
             <div id="sliders-container" class="fusion-slider-visibility">                   </div>
             <main id="main" class="clearfix">
@@ -99,7 +382,6 @@
                   <section id="content" style="width: 100%;">
                      <div id="post-1141" class="post-1141 page type-page status-publish hentry">
                         <span class="entry-title rich-snippet-hidden">Search Results Page</span><span class="vcard rich-snippet-hidden"><span class="fn"><a href="http://localhost/doctorseo/wordpress/author/admin/" title="Posts by admin" rel="author">admin</a></span></span><span class="updated rich-snippet-hidden">2023-03-05T20:20:07+00:00</span>                         
-
                               <div>
       <?php
       $zipcode = isset($_GET['zipcode']) ? $_GET['zipcode'] : 'unknown';
@@ -107,6 +389,8 @@
       <div>
          <h2>Therapists in <?php echo htmlspecialchars($zipcode); ?></h2>
       </div>
+      <!-- Add filter checkboxes and search button -->
+
 <?php
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -135,16 +419,26 @@ if (isset($_GET['zipcode'])) {
     $elements_per_page = 2;
 
     $offset = ($current_page - 1) * $elements_per_page;
+    $filters = isset($_GET['spec']) ? $_GET['spec'] : [];
+
+    // Generate SQL query based on selected filters
+    $filter_conditions = '';
+    if (!empty($filters)) {
+        $filter_conditions = " AND (";
+        $filter_conditions .= implode(" = 1 OR ", $filters) . " = 1";
+        $filter_conditions .= ")";
+    }
 
     // Prepare and execute the main query
-    $query = "SELECT * FROM therapist_profiles WHERE zip_code = ? LIMIT $elements_per_page OFFSET $offset";
+    $query = "SELECT * FROM therapist_profiles WHERE zip_code = ?" . $filter_conditions . " LIMIT $elements_per_page OFFSET $offset";
     $stmt = mysqli_prepare($conn, $query);
     mysqli_stmt_bind_param($stmt, "s", $zipcode);
     mysqli_stmt_execute($stmt);
 
-    if (mysqli_stmt_error($stmt)) {
-        echo "Error: " . mysqli_stmt_error($stmt);
-    }
+if (mysqli_stmt_error($stmt)) {
+  echo "Error: " . mysqli_stmt_error($stmt);
+}
+
 
     // Fetch results and display them
     $result = mysqli_stmt_get_result($stmt);
@@ -172,14 +466,14 @@ if (isset($_GET['zipcode'])) {
                                  </div>
                               </div>
                            </div>
-                           <div class="fusion-fullwidth fullwidth-box fusion-builder-row-3 fusion-flex-container has-pattern-background has-mask-background nonhundred-percent-fullwidth non-hundred-percent-height-scrolling" style="--awb-border-sizes-top:10px;--awb-border-sizes-bottom:10px;--awb-border-sizes-left:10px;--awb-border-sizes-right:10px;--awb-border-radius-top-left:10px;--awb-border-radius-top-right:10px;--awb-border-radius-bottom-right:10px;--awb-border-radius-bottom-left:10px;--awb-overflow:hidden;" >
+                           <div class="fusion-fullwidth fullwidth-box fusion-builder-row-3 fusion-flex-container has-pattern-background has-mask-background nonhundred-percent-fullwidth non-hundred-percent-height-scrolling fusion-custom-z-index" style="--awb-border-sizes-top:10px;--awb-border-sizes-bottom:10px;--awb-border-sizes-left:10px;--awb-border-sizes-right:10px;--awb-border-radius-top-left:10px;--awb-border-radius-top-right:10px;--awb-border-radius-bottom-right:10px;--awb-border-radius-bottom-left:10px;--awb-overflow:hidden;--awb-z-index:5;" >
                               <div class="fusion-builder-row fusion-row fusion-flex-align-items-flex-start" style="max-width:1216.8px;margin-left: calc(-4% / 2 );margin-right: calc(-4% / 2 );">
                                  <div class="fusion-layout-column fusion_builder_column fusion-builder-column-3 fusion-flex-column" style="--awb-bg-size:cover;--awb-width-large:22.69%;--awb-margin-top-large:0px;--awb-spacing-right-large:8.4618774790657%;--awb-margin-bottom-large:0px;--awb-spacing-left-large:8.4618774790657%;--awb-width-medium:100%;--awb-order-medium:0;--awb-spacing-right-medium:1.92%;--awb-spacing-left-medium:1.92%;--awb-width-small:100%;--awb-order-small:0;--awb-spacing-right-small:1.92%;--awb-spacing-left-small:1.92%;">
                                     <div class="fusion-column-wrapper fusion-column-has-shadow fusion-flex-justify-content-flex-start fusion-content-layout-column">
                                        <div class="fusion-image-element" style="--awb-margin-top:25px;--awb-margin-bottom:0px;--awb-margin-left:10px;--awb-caption-title-size:var(--h2_typography-font-size);--awb-caption-title-transform:var(--h2_typography-text-transform);--awb-caption-title-line-height:var(--h2_typography-line-height);--awb-caption-title-letter-spacing:var(--h2_typography-letter-spacing);"><span class="fusion-imageframe imageframe-none imageframe-3 hover-type-none">              <img decoding="async" width="359" height="370" alt="Profile Picture" title="Profile Picture" src="%%PROFILE_PICTURE_URL%%" class="img-responsive wp-image-271"/></span></div>
                                     </div>
                                  </div>
-                                 <div class="fusion-layout-column fusion_builder_column fusion-builder-column-4 fusion-flex-column" style="--awb-bg-size:cover;--awb-width-large:50%;--awb-margin-top-large:0px;--awb-spacing-right-large:0%;--awb-margin-bottom-large:10px;--awb-spacing-left-large:3.84%;--awb-width-medium:100%;--awb-order-medium:0;--awb-spacing-right-medium:1.92%;--awb-spacing-left-medium:1.92%;--awb-width-small:100%;--awb-order-small:0;--awb-spacing-right-small:1.92%;--awb-spacing-left-small:1.92%;">
+                                 <div class="fusion-layout-column fusion_builder_column fusion-builder-column-5 fusion-flex-column" style="--awb-bg-size:cover;--awb-width-large:50%;--awb-margin-top-large:0px;--awb-spacing-right-large:0%;--awb-margin-bottom-large:10px;--awb-spacing-left-large:3.84%;--awb-width-medium:100%;--awb-order-medium:0;--awb-spacing-right-medium:1.92%;--awb-spacing-left-medium:1.92%;--awb-width-small:100%;--awb-order-small:0;--awb-spacing-right-small:1.92%;--awb-spacing-left-small:1.92%;">
                                     <div class="fusion-column-wrapper fusion-column-has-shadow fusion-flex-justify-content-flex-start fusion-content-layout-column">
                                        <div class="fusion-text fusion-text-1">
                                           <h2><a href="http://MainProfile.html"><strong>Name</strong></a></h2>
@@ -188,11 +482,11 @@ if (isset($_GET['zipcode'])) {
                                           <h4><strong>Credentials</strong></h4>
                                        </div>
                                        <div class="fusion-text fusion-text-3">
-                                          <h5><strong>I know the decision to seek therapy and to find the 'right' therapist is not an easy one, so I do my best to provide the mental guidance and emotional balance that you're looking for. My approach is eclectic, but I think a touch of humor is essential to ease the anxieties...</strong></h5>
+                                          <h5 data-fontsize="16" style="--fontSize:16; line-height: 2; --minFontSize:16;" data-lineheight="32px" class="fusion-responsive-typography-calculated"><strong>I know the decision to seek therapy and to find the &#8216;right&#8217; therapist is not an easy one, so I do my best to provide the mental guidance and emotional e that you&#8217;re looking for. My approach is eclectic, but I think a touch of humor is essential to ease the anxieties&#8230;</strong></h5>
                                        </div>
                                     </div>
                                  </div>
-                                 <div class="fusion-layout-column fusion_builder_column fusion-builder-column-5 fusion-flex-column" style="--awb-bg-size:cover;--awb-width-large:27.03%;--awb-margin-top-large:0px;--awb-spacing-right-large:9.5893451720311%;--awb-margin-bottom-large:30px;--awb-spacing-left-large:2.1309655937847%;--awb-width-medium:100%;--awb-order-medium:0;--awb-spacing-right-medium:1.92%;--awb-spacing-left-medium:1.92%;--awb-width-small:100%;--awb-order-small:0;--awb-spacing-right-small:1.92%;--awb-spacing-left-small:1.92%;">
+                                 <div class="fusion-layout-column fusion_builder_column fusion-builder-column-6 fusion-flex-column" style="--awb-bg-size:cover;--awb-width-large:27.03%;--awb-margin-top-large:0px;--awb-spacing-right-large:9.5893451720311%;--awb-margin-bottom-large:30px;--awb-spacing-left-large:2.1309655937847%;--awb-width-medium:100%;--awb-order-medium:0;--awb-spacing-right-medium:1.92%;--awb-spacing-left-medium:1.92%;--awb-width-small:100%;--awb-order-small:0;--awb-spacing-right-small:1.92%;--awb-spacing-left-small:1.92%;">
                                     <div class="fusion-column-wrapper fusion-column-has-shadow fusion-flex-justify-content-flex-start fusion-content-layout-column">
                                        <div class="fusion-text fusion-text-4">
                                           <h2>Company</h2>
@@ -217,10 +511,7 @@ if (isset($_GET['zipcode'])) {
             $profileHtml = str_replace('Phone Number', $row['phone_number'], $profileHtml);
 
            // Replace the image src attribute with the actual image URL, if available
-$imageUrl = '/SignUpPagesHTML' . ltrim($row['profile_picture'], '.');
-            echo "Image URL: " . $imageUrl . "<br>";
-echo "Original path from the database: " . $row['profile_picture'] . "<br>";
-
+            $imageUrl = '/SignUpPagesHTML' . ltrim($row['profile_picture'], '.');
             $profileHtml = str_replace('%%PROFILE_PICTURE_URL%%', $imageUrl, $profileHtml);
 
 
@@ -365,6 +656,34 @@ echo "Original path from the database: " . $row['profile_picture'] . "<br>";
             });
                             
          </script>                      
+<script>
+  // Function to apply the search filter and update the URL
+  function applyFilter() {
+    const form = document.getElementById('filter-form');
+    const inputs = form.getElementsByTagName('input');
+    const checkedFilters = [];
+
+    for (let i = 0; i < inputs.length; i++) {
+      if (inputs[i].type === 'checkbox' && inputs[i].checked) {
+        checkedFilters.push('spec[]=' + encodeURIComponent(inputs[i].id));
+      }
+    }
+
+    const currentUrl = new URL(window.location.href);
+    const queryString = currentUrl.search ? currentUrl.search + '&' + checkedFilters.join('&') : '?' + checkedFilters.join('&');
+    const newUrl = currentUrl.origin + currentUrl.pathname + queryString;
+    window.location.href = newUrl;
+  }
+
+
+  // Attach the applyFilter function to the checkboxes
+  const checkboxes = document.querySelectorAll('#filter-form input[type="checkbox"]');
+  checkboxes.forEach(checkbox => {
+    checkbox.addEventListener('change', applyFilter);
+  });
+</script>
+
+
       </div>
       <section class="to-top-container to-top-right" aria-labelledby="awb-to-top-label">        <a href="#" id="toTop" class="fusion-top-top-link">             <span id="awb-to-top-label" class="screen-reader-text">Go to Top</span>         </a>    </section>
    </body>
