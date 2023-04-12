@@ -367,36 +367,10 @@
 }
 @media (max-width: 767px) {
   .custom-signup-button {
-    --button_accent_color: #ffffff;
-    --button_border_color: rgba(255, 255, 255, 0);
-    --button_accent_hover_color: #ffffff;
-    --button_border_hover_color: #ffffff;
-    --button_border_width-top: 0px;
-    --button_border_width-right: 0px;
-    --button_border_width-bottom: 2px;
-    --button_border_width-left: 0px;
-    --button-border-radius-top-left: 1px;
-    --button-border-radius-top-right: 1px;
-    --button-border-radius-bottom-right: 1px;
-    --button-border-radius-bottom-left: 1px;
-    --button_gradient_top_color: rgba(0, 0, 0, 0);
-    --button_gradient_bottom_color: rgba(0, 0, 0, 0);
-    --button_gradient_top_color_hover: rgba(255, 255, 255, 0);
-    --button_gradient_bottom_color_hover: rgba(255, 255, 255, 0);
-    --button_text_transform: var(--awb-typography3-text-transform);
-    --button_font_size: 17px;
-    --button_line_height: var(--awb-typography3-line-height);
-    --button_padding-top: 14px;
     --button_padding-right: 10px;
-    --button_padding-bottom: 14px;
     --button_padding-left: 0px;
-    --button_typography-letter-spacing: var(--awb-typography3-letter-spacing);
-    --button_typography-font-family: "Rubik";
-    --button_typography-font-style: normal;
-    --button_typography-font-weight: 400;
   }
 }
-
 
 
 .health-close:before {
