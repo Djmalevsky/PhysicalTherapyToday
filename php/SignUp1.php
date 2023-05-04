@@ -33,21 +33,26 @@ if(isset($_POST['submit'])) {
   if (mysqli_num_rows($result) > 0) {
     echo "Error: Email already exists!";
   } else {
-    // Hash password using bcrypt
-    $hash = password_hash($_SESSION['password'], PASSWORD_BCRYPT);
-
-    // Insert new therapist profile into therapist_profiles table
-    $sql = "INSERT INTO therapist_profiles (email, street_address, city, state, zip_code, password, first_name, middle_name, last_name, credentials, license_number, license_state, license_expiration, company, phone_number, education_bachelors, education_graduate, education_residency, education_fellowship, treat_one_on_one, billing_info) 
-    VALUES ('{$_SESSION['email']}', 'N/A', 'N/A', 'N/A', 'N/A', '$hash', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', '1970-01-01', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'No', 'N/A')";
-
-    if (mysqli_query($conn, $sql)) {
-      echo "New record created successfully";
-      mysqli_commit($conn);
-      // Redirect to sign-up-second-page.html
-      header("Location: ../sign-up-second-page.html");
-      exit();
+    // Check if password and confirm password match
+    if ($_SESSION['password'] !== $_SESSION['confirm_password']) {
+      echo "Error: Passwords do not match!";
     } else {
-      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+      // Hash password using bcrypt
+      $hash = password_hash($_SESSION['password'], PASSWORD_BCRYPT);
+
+      // Insert new therapist profile into therapist_profiles table
+      $sql = "INSERT INTO therapist_profiles (email, street_address, city, state, zip_code, password, first_name, middle_name, last_name, credentials, license_number, license_state, license_expiration, company, phone_number, education_bachelors, education_graduate, education_residency, education_fellowship, treat_one_on_one, billing_info) 
+      VALUES ('{$_SESSION['email']}', 'N/A', 'N/A', 'N/A', 'N/A', '$hash', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', '1970-01-01', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'No', 'N/A')";
+
+      if (mysqli_query($conn, $sql)) {
+        echo "New record created successfully";
+        mysqli_commit($conn);
+        // Redirect to sign-up-second-page.html
+        header("Location: ../sign-up-second-page.html");
+        exit();
+      } else {
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+      }
     }
   }
 
